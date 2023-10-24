@@ -6,14 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'MonProjet';
-  nom="mortadha";
-  prenom="jouini";
-
-  status:boolean=true;
-
-  Click(){
-    this.nom=this.nom=="jjj"?"mortadha":"jjj";
-    
-  }
+  title = 'My Angular App';
 }
