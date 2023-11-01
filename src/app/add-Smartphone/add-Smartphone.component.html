@@ -1,27 +1,40 @@
 <div class="container">
     <div>
-    <h2>Ajouter un Smartphone :</h2>
+        <h2>Ajouter un Smartphone :</h2>
     </div>
-    <form >
+    <form>
         <div class="col-sm-2 col-md-2 col-lg-2">
-        <label >Marque</label>
-        <input type="text" [(ngModel)]="newSmartphone.idSmartphone" name="idSmartphone" class="form-control">
-        </div>
-        <div class="col-sm-4 col-md-4 col-lg-4" >
-        <label >Model</label>
-        <input type="text"[(ngModel)]= "newSmartphone.nomSmartphone" name="nomSmartphone" class="form-control">
-        </div>
-        <div class="col-sm-2 col-md-2 col-lg-2">
-        <label >Prix</label>
-        <input type="number" [(ngModel)]= "newSmartphone.prixSmartphone" name="prixSmartphone" class="form-control">
+            <label>ID Smartphone</label>
+            <input type="text" [(ngModel)]="newSmartphone.idSmartphone" name="idSmartphone" class="form-control">
         </div>
         <div class="col-sm-4 col-md-4 col-lg-4">
-        <label >Date création</label>
-        <input type="date" [(ngModel)]= "newSmartphone.dateCreation" name="dateCreation" class="form-control">
+            <label>Marque</label>
+            <input type="text" [(ngModel)]="newSmartphone.modelSmartphone" name="modelSmartphone" class="form-control">
         </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Model</label>
+            <input type="text" [(ngModel)]="newSmartphone.nomSmartphone" name="nomSmartphone" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <label>Prix</label>
+            <input type="number" [(ngModel)]="newSmartphone.prixSmartphone" name="prixSmartphone" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date création</label>
+            <input type="date" [(ngModel)]="newSmartphone.dateCreation" name="dateCreation" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Classe</label>
+            <select class="form-control form-control-lg" id="idClasse" name="idClasse"
+            [(ngModel)]="newIdCat">
+             <option *ngFor="let cat of categories" [value]="cat.idClasse" >
+             {{cat.nomClasse}}
+            </option>
+            </select>
+            </div>
+            
         <div class="mt-2">
-        <button type="submit" (click)="addSmartphone()"class="btn btn-success">Ajouter</button>
+            <button type="submit" (click)="addSmartphone()" class="btn btn-success">Ajouter</button>
         </div>
-        </form>
-        </div>
-        
+    </form>
+</div>
