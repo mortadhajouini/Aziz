@@ -7,6 +7,8 @@ import { FormsModule } from '@angular/forms';
 import { SmartphonesComponent } from './Smartphone/Smartphone.component';
 import { AddSmartphoneComponent } from './add-Smartphone/add-Smartphone.component';
 import { UpdateSmartphoneComponent } from './update-Smartphone/update-Smartphone.component';
+import { LoginComponent } from './login/login.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { UpdateSmartphoneComponent } from './update-Smartphone/update-Smartphone
     SmartphonesComponent,
     SmartphonesComponent,
     AddSmartphoneComponent,
-    UpdateSmartphoneComponent
+    UpdateSmartphoneComponent,
+    LoginComponent,
+    ForbiddenComponent
   ],
   imports: [
     BrowserModule,

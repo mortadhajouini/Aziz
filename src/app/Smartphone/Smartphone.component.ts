@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Smartphone } from '../model/Smartphone.model';
 import { SmartphoneService } from '../services/Smartphone.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-Smartphones',
@@ -10,7 +11,7 @@ import { SmartphoneService } from '../services/Smartphone.service';
 export class SmartphonesComponent {
   Smartphones : Smartphone[]; //un tableau de Smartphone
 
-  constructor(private SmartphoneService: SmartphoneService) {
+  constructor(private SmartphoneService: SmartphoneService,public authService: AuthService) {
     this.Smartphones = [
       {idSmartphone : 1, modelSmartphone : "Samsung", nomSmartphone : "Galaxy S23 Ultra", prixSmartphone : 5800, dateCreation : new Date("02/17/2023"), classe : {idClasse : 1, nomClasse : "Flagship"}},
       {idSmartphone : 2, modelSmartphone : "Apple", nomSmartphone : "Iphone 15 Pro Max", prixSmartphone : 6799, dateCreation : new Date("09/22/2023"), classe : {idClasse : 1, nomClasse : "Flagship"}},

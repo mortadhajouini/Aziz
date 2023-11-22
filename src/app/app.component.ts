@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'My Angular App';
+  constructor (public authService: AuthService) {
+    
+  }
+  ngOnInit () {
+    let isloggedin: string;
+    let loggedUser:string;
+    isloggedin = localStorage.getItem('isloggedIn');
+    loggedUser = localStorage.getItem('loggedUser');
+    if (isloggedin!="true" || !loggedUser)
+    this.router.navigate(['/login']);
+    else
+    this.authService.setLoggedUserFromLocalStorage(loggedUser);
+    }
+    
+
 }
